@@ -23,13 +23,13 @@
 
   <meta name="description" content="Coin Change 题目 给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成总金额所需的最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 -1。 解题思路条件：  有多种面额 每种面额数量不限 输出凑成面额的最少硬币个数 没有可能输出 -1  如有 [1, 2, 5] 三种面额，总金额 amount 为 11，答案为 3 既 11 &#x3D; 5 + 5">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Coin Change">
+<meta property="og:title" content="零钱兑换">
 <meta property="og:url" content="https://zhongyi.io/2020/04/322-coin-change/index.html">
 <meta property="og:site_name" content="Zhongyi I&#x2F;O">
 <meta property="og:description" content="Coin Change 题目 给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成总金额所需的最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 -1。 解题思路条件：  有多种面额 每种面额数量不限 输出凑成面额的最少硬币个数 没有可能输出 -1  如有 [1, 2, 5] 三种面额，总金额 amount 为 11，答案为 3 既 11 &#x3D; 5 + 5">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-02T07:57:52.000Z">
-<meta property="article:modified_time" content="2020-04-02T09:13:53.012Z">
+<meta property="article:modified_time" content="2020-04-02T10:14:40.875Z">
 <meta property="article:author" content="zhongyiio">
 <meta property="article:tag" content="leetcode">
 <meta property="article:tag" content="coin">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>Coin Change | Zhongyi I/O</title>
+  <title>零钱兑换 | Zhongyi I/O</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109699693-1"></script>
     <script>
@@ -177,7 +177,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Coin Change
+          零钱兑换
         </h1>
 
         <div class="post-meta">
@@ -188,7 +188,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-04-02 15:57:52 / Modified: 17:13:53" itemprop="dateCreated datePublished" datetime="2020-04-02T15:57:52+08:00">2020-04-02</time>
+              <time title="Created: 2020-04-02 15:57:52 / Modified: 18:14:40" itemprop="dateCreated datePublished" datetime="2020-04-02T15:57:52+08:00">2020-04-02</time>
             </span>
 
           
@@ -214,7 +214,7 @@
 <p>如有 [1, 2, 5] 三种面额，总金额 amount 为 11，答案为 3 既 11 = 5 + 5 + 1</p>
 <p>比如你想求 amount = 11 时的最少硬币数（原问题），如果知道凑出 amount = 10 的最少硬币数（子问题），只需要把子问题的答案加一（再选一枚面值为 1 的硬币)）就是原问题的答案，因为硬币的数量是没有限制的，子问题之间没有相互制，是互相独立的。这类子问题又称为最优子结构。</p>
 <script type="math/tex; mode=display">
-dp(n)=\begin{cases} 0,n=0\\ -1,n < 0\\ min\{dp(n-coin)+1, coin \in coins\})\end{cases}</script><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">coinChange</span><span class="params">(coins []<span class="keyword">int</span>, amount <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	cache := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">int</span>]<span class="keyword">int</span>)</span><br><span class="line">	<span class="keyword">return</span> dp(coins, amount, cache)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">dp</span><span class="params">(coins []<span class="keyword">int</span>, amount <span class="keyword">int</span>, cache <span class="keyword">map</span>[<span class="keyword">int</span>]<span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> n, ok := cache[amount]; ok &#123;</span><br><span class="line">		<span class="keyword">return</span> n</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> amount == <span class="number">0</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> amount &lt; <span class="number">0</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">	&#125;</span><br><span class="line">	res := math.MaxInt8</span><br><span class="line">	<span class="keyword">for</span> _, coin := <span class="keyword">range</span> coins &#123;</span><br><span class="line">		sub := dp(coins, amount-coin, cache)</span><br><span class="line">		<span class="keyword">if</span> sub == <span class="number">-1</span> &#123;</span><br><span class="line">			<span class="keyword">continue</span></span><br><span class="line">		&#125;</span><br><span class="line">		res = min(res, <span class="number">1</span>+sub)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> res != math.MaxInt8 &#123;</span><br><span class="line">		cache[amount] = res</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		cache[amount] = <span class="number">-1</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> cache[amount]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">min</span><span class="params">(a, b <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> a &lt; b &#123;</span><br><span class="line">		<span class="keyword">return</span> a</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> b</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+dp(n)=\begin{cases} 0,n=0\\ -1,n < 0\\ min\{dp(n-coin)+1, coin \in coins\}\end{cases}</script><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">coinChange</span><span class="params">(coins []<span class="keyword">int</span>, amount <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	cache := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">int</span>]<span class="keyword">int</span>)</span><br><span class="line">	<span class="keyword">return</span> dp(coins, amount, cache)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">dp</span><span class="params">(coins []<span class="keyword">int</span>, amount <span class="keyword">int</span>, cache <span class="keyword">map</span>[<span class="keyword">int</span>]<span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> n, ok := cache[amount]; ok &#123;</span><br><span class="line">		<span class="keyword">return</span> n</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> amount == <span class="number">0</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> amount &lt; <span class="number">0</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">	&#125;</span><br><span class="line">	res := math.MaxInt8</span><br><span class="line">	<span class="keyword">for</span> _, coin := <span class="keyword">range</span> coins &#123;</span><br><span class="line">		sub := dp(coins, amount-coin, cache)</span><br><span class="line">		<span class="keyword">if</span> sub == <span class="number">-1</span> &#123;</span><br><span class="line">			<span class="keyword">continue</span></span><br><span class="line">		&#125;</span><br><span class="line">		res = min(res, <span class="number">1</span>+sub)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> res != math.MaxInt8 &#123;</span><br><span class="line">		cache[amount] = res</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		cache[amount] = <span class="number">-1</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> cache[amount]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">min</span><span class="params">(a, b <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> a &lt; b &#123;</span><br><span class="line">		<span class="keyword">return</span> a</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> b</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -238,7 +238,10 @@ dp(n)=\begin{cases} 0,n=0\\ -1,n < 0\\ min\{dp(n-coin)+1, coin \in coins\})\end{
     <a href="/2018/06/If-today-were-the-last-day-of-my-life/" rel="prev" title="If Today were The Last Day of My Fife">
       <i class="fa fa-chevron-left"></i> If Today were The Last Day of My Fife
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/04/300-LIS/" rel="next" title="最长递增子序列">
+      最长递增子序列 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
