@@ -181,7 +181,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-04-02 18:12:52 / Modified: 21:13:27" itemprop="dateCreated datePublished" datetime="2020-04-02T18:12:52+08:00">2020-04-02</time>
+              <time title="Created: 2020-04-02 18:12:52 / Modified: 21:22:01" itemprop="dateCreated datePublished" datetime="2020-04-02T18:12:52+08:00">2020-04-02</time>
             </span>
 
           
@@ -200,7 +200,7 @@
 <figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">输入: [<span class="number">10</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">101</span>,<span class="number">18</span>]</span><br><span class="line">输出: <span class="number">4</span> </span><br><span class="line">解释: 最长的上升子序列是 [<span class="number">2</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">101</span>]，它的长度是 <span class="number">4</span>。</span><br></pre></td></tr></table></figure>
 <p>这道题目的关键是找到切入点，$dp(i)$ 指的是以第 i 个元素结尾的最长递增序列， 用数学公式表示如下：</p>
 <script type="math/tex; mode=display">
-dp(i)=max\{d(j)+1\}, nums[j] < nums[i], \{j \in \{0...i-1\}</script><p>表1 模拟</p>
+dp(i)=max\{d(j)+1, nums[j] < nums[i], \{j \in \{0...i-1\}\}</script><p>表1 模拟</p>
 <div class="table-container">
 <table>
 <thead>
