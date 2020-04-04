@@ -208,7 +208,7 @@
       
         <p>给定一个无序的整数数组，找到其中最长上升子序列的长度。</p>
 <p>示例:</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">输入: [<span class="number">10</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">101</span>,<span class="number">18</span>]</span><br><span class="line">输出: <span class="number">4</span> </span><br><span class="line">解释: 最长的上升子序列是 [<span class="number">2</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">101</span>]，它的长度是 <span class="number">4</span>。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: [10,9,2,5,3,7,101,18]</span><br><span class="line">输出: 4 </span><br><span class="line">解释: 最长的上升子序列是 [2,3,7,101]，它的长度是 4。</span><br></pre></td></tr></table></figure>
 <p>这道题目的关键是找到切入点，$dp(i)$ 指的是以第 i 个元素结尾的最长递增序列， 用数学公式表示如下：</p>
 <script type="math/tex; mode=display">
 dp(i)=max\{d(j)+1, nums[j] < nums[i], \{j \in \{0...i-1\}\}</script><p>表1 模拟</p>
@@ -276,7 +276,10 @@ dp(i)=max\{d(j)+1, nums[j] < nums[i], \{j \in \{0...i-1\}\}</script><p>表1 模�
     <a href="/2020/04/322-coin-change/" rel="prev" title="零钱兑换">
       <i class="fa fa-chevron-left"></i> 零钱兑换
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/04/Untitled/" rel="next" title="Untitled">
+      Untitled <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
