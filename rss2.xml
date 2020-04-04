@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Zhongyi I/O</title>
+    <link>https://zhongyi.io/</link>
+    
+    <image>
+      <url>https://zhongyi.io/icon.png</url>
+      <title>Zhongyi I/O</title>
+      <link>https://zhongyi.io/</link>
+    </image>
+    
+    <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description></description>
+    <pubDate>Sat, 04 Apr 2020 14:41:54 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>反转链表</title>
+      <link>https://zhongyi.io/2020/04/linked-list/</link>
+      <guid>https://zhongyi.io/2020/04/linked-list/</guid>
+      <pubDate>Sat, 04 Apr 2020 12:27:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;p&gt;反转一个单链表。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例:&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入:
+          
+        
+      
+      </description>
+      
+      
+      <comments>https://zhongyi.io/2020/04/linked-list/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>最长递增子序列</title>
+      <link>https://zhongyi.io/2020/04/300-LIS/</link>
+      <guid>https://zhongyi.io/2020/04/300-LIS/</guid>
+      <pubDate>Thu, 02 Apr 2020 10:12:52 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;p&gt;给定一个无序的整数数组，找到其中最长上升子序列的长度。&lt;/p&gt;
+&lt;p&gt;示例:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入:
+          
+        
+      
+      </description>
+      
+      
+      <comments>https://zhongyi.io/2020/04/300-LIS/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>零钱兑换</title>
+      <link>https://zhongyi.io/2020/04/322-coin-change/</link>
+      <guid>https://zhongyi.io/2020/04/322-coin-change/</guid>
+      <pubDate>Thu, 02 Apr 2020 07:57:52 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;p&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/coin-change/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Coin Change 题目&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;给定不同面额的硬币 coins 和一个总金额
+          
+        
+      
+      </description>
+      
+      
+      <comments>https://zhongyi.io/2020/04/322-coin-change/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>If Today were The Last Day of My Fife</title>
+      <link>https://zhongyi.io/2018/06/If-today-were-the-last-day-of-my-life/</link>
+      <guid>https://zhongyi.io/2018/06/If-today-were-the-last-day-of-my-life/</guid>
+      <pubDate>Fri, 08 Jun 2018 00:44:50 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;p&gt;For the past 33 years, I’ve looked in the mirror every morning and asked myself: “If today were the last day of my life, would I want to
+          
+        
+      
+      </description>
+      
+      
+      <comments>https://zhongyi.io/2018/06/If-today-were-the-last-day-of-my-life/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>MySQL常用语句</title>
+      <link>https://zhongyi.io/2018/04/useful-sql/</link>
+      <guid>https://zhongyi.io/2018/04/useful-sql/</guid>
+      <pubDate>Mon, 16 Apr 2018 06:12:40 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;h3 id=&quot;创建数据库&quot;&gt;&lt;a href=&quot;#创建数据库&quot; class=&quot;headerlink&quot; title=&quot;创建数据库&quot;&gt;&lt;/a&gt;创建数据库&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+          
+        
+      
+      </description>
+      
+      
+      <comments>https://zhongyi.io/2018/04/useful-sql/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Nginx 403 Forbidden</title>
+      <link>https://zhongyi.io/2017/11/nginx-403-forbidden/</link>
+      <guid>https://zhongyi.io/2017/11/nginx-403-forbidden/</guid>
+      <pubDate>Tue, 14 Nov 2017 14:52:33 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;p&gt;每次重新部署 Nginx 总会遇到 &lt;code&gt;Nginx 403 Forbidden&lt;/code&gt; 这个错误，这里列一个排除此类错误的清单。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;确认 Nginx 正常启动，这里要记录启动 Nginx 的用户供后续步骤使用，通常是
+          
+        
+      
+      </description>
+      
+      
+      <comments>https://zhongyi.io/2017/11/nginx-403-forbidden/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>如果</title>
+      <link>https://zhongyi.io/2017/09/outlook-on-life/</link>
+      <guid>https://zhongyi.io/2017/09/outlook-on-life/</guid>
+      <pubDate>Fri, 22 Sep 2017 12:28:25 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;p&gt;如果你能保持冷静，当你身边的人们都变得疯狂，纷纷指责你；&lt;/p&gt;
+&lt;p&gt;如果你能相信自己，当所有人怀疑你，但且让他们怀疑去吧；&lt;/p&gt;
+&lt;p&gt;如果你遭等待，却不因等待疲倦，或者遭受欺骗，却不用谎言回敬，或者遭到憎恨，却不用憎恨反击，能够不得意忘形，也能够不巧言令色；&lt;/p&gt;
+          
+        
+      
+      </description>
+      
+      
+      <comments>https://zhongyi.io/2017/09/outlook-on-life/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>缘聚缘散，下一站出发</title>
+      <link>https://zhongyi.io/2017/04/a-new-start/</link>
+      <guid>https://zhongyi.io/2017/04/a-new-start/</guid>
+      <pubDate>Sat, 01 Apr 2017 08:25:37 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;p&gt;截止写这篇文章来北京已经 2 年零 8 个月了，说说这段时间的感受。&lt;/p&gt;
+&lt;p&gt;2014 年 7 月 1
+          
+        
+      
+      </description>
+      
+      
+      <comments>https://zhongyi.io/2017/04/a-new-start/#disqus_thread</comments>
+    </item>
+    
+  </channel>
+</rss>
