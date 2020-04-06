@@ -15,8 +15,31 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 05 Apr 2020 14:58:12 GMT</pubDate>
+    <pubDate>Mon, 06 Apr 2020 13:13:23 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>回文列表</title>
+      <link>https://zhongyi.io/2020/04/palindrome-linked-list/</link>
+      <guid>https://zhongyi.io/2020/04/palindrome-linked-list/</guid>
+      <pubDate>Mon, 06 Apr 2020 13:04:55 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;p&gt;请判断一个链表是否为回文链表。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span
+          
+        
+      
+      </description>
+      
+      
+      <comments>https://zhongyi.io/2020/04/palindrome-linked-list/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>二叉树的最大深度</title>
@@ -44,8 +67,8 @@
     
     <item>
       <title>反转链表</title>
-      <link>https://zhongyi.io/2020/04/linked-list/</link>
-      <guid>https://zhongyi.io/2020/04/linked-list/</guid>
+      <link>https://zhongyi.io/2020/04/reverse-linked-list/</link>
+      <guid>https://zhongyi.io/2020/04/reverse-linked-list/</guid>
       <pubDate>Sat, 04 Apr 2020 12:27:00 GMT</pubDate>
       <description>
       
@@ -62,7 +85,7 @@
       </description>
       
       
-      <comments>https://zhongyi.io/2020/04/linked-list/#disqus_thread</comments>
+      <comments>https://zhongyi.io/2020/04/reverse-linked-list/#disqus_thread</comments>
     </item>
     
     <item>

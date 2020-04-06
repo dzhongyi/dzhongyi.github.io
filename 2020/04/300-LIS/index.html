@@ -29,7 +29,7 @@
 <meta property="og:description" content="给定一个无序的整数数组，找到其中最长上升子序列的长度。 示例: 输入: [10,9,2,5,3,7,101,18]输出: 4 解释: 最长的上升子序列是 [2,3,7,101]，它的长度是 4。 这道题目的关键是找到切入点，$dp(i)$ 指的是以第 i 个元素结尾的最长递增序列， 用数学公式表示如下：  dp(i)&#x3D;max\{d(j)+1, nums[j] &lt; nums[i], \{j \in">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-02T10:12:52.000Z">
-<meta property="article:modified_time" content="2020-04-03T02:32:28.961Z">
+<meta property="article:modified_time" content="2020-04-06T13:06:36.872Z">
 <meta property="article:author" content="zhongyiio">
 <meta property="article:tag" content="LIS">
 <meta name="twitter:card" content="summary">
@@ -193,7 +193,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-04-03 10:32:28" itemprop="dateModified" datetime="2020-04-03T10:32:28+08:00">2020-04-03</time>
+                <time title="Modified: 2020-04-06 21:06:36" itemprop="dateModified" datetime="2020-04-06T21:06:36+08:00">2020-04-06</time>
               </span>
 
           
@@ -254,7 +254,7 @@ dp(i)=max\{d(j)+1, nums[j] < nums[i], \{j \in \{0...i-1\}\}</script><p>表1 模�
 </tbody>
 </table>
 </div>
-<p>代码如下：</p>
+<p><strong>代码：</strong></p>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">lengthOfLIS</span><span class="params">(nums []<span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	l := <span class="built_in">len</span>(nums)</span><br><span class="line">	<span class="keyword">if</span> l == <span class="number">0</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">	&#125;</span><br><span class="line">	dp := <span class="built_in">make</span>([]<span class="keyword">int</span>, l)</span><br><span class="line">	<span class="comment">// initial dp array default 1</span></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; l; i++ &#123;</span><br><span class="line">		dp[i] = <span class="number">1</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	res := <span class="number">1</span></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; l; i++ &#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> j := i - <span class="number">1</span>; j &gt;= <span class="number">0</span>; j-- &#123;</span><br><span class="line">			<span class="keyword">if</span> nums[j] &lt; nums[i] &#123;</span><br><span class="line">				dp[i] = max(dp[i], <span class="number">1</span> + dp[j])</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		res = max(res, dp[i])</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">max</span><span class="params">(a, b <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> a &gt; b &#123;</span><br><span class="line">		<span class="keyword">return</span> a</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> b</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
@@ -278,7 +278,7 @@ dp(i)=max\{d(j)+1, nums[j] < nums[i], \{j \in \{0...i-1\}\}</script><p>表1 模�
       <i class="fa fa-chevron-left"></i> 零钱兑换
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/04/linked-list/" rel="next" title="反转链表">
+    <a href="/2020/04/reverse-linked-list/" rel="next" title="反转链表">
       反转链表 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>

@@ -21,21 +21,21 @@
     var CONFIG = {"hostname":"zhongyi.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"remove","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":{"gitalk":null},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="反转一个单链表。 示例: 输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL 进阶:你可以迭代或递归地反转链表。你能否用两种方法解决这道题？ 思路: 在遍历列表时，将当前节点的 head.Next 指针改为指向prev 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULLNULL&amp;">
+  <meta name="description" content="请判断一个链表是否为回文链表。 示例 1: 输入: 1-&gt;2输出: false 示例 2: 输入: 1-&gt;2-&gt;2-&gt;1输出: true 进阶：你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？ 思路： 回文链表和回文字符串类似，逆序后和原链表值一一对应，所以首先能想到的解法是复制一个链表，然后问题转化为 反转链表。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="反转链表">
-<meta property="og:url" content="https://zhongyi.io/2020/04/linked-list/index.html">
+<meta property="og:title" content="回文列表">
+<meta property="og:url" content="https://zhongyi.io/2020/04/palindrome-linked-list/index.html">
 <meta property="og:site_name" content="Zhongyi I&#x2F;O">
-<meta property="og:description" content="反转一个单链表。 示例: 输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL 进阶:你可以迭代或递归地反转链表。你能否用两种方法解决这道题？ 思路: 在遍历列表时，将当前节点的 head.Next 指针改为指向prev 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULLNULL&amp;">
+<meta property="og:description" content="请判断一个链表是否为回文链表。 示例 1: 输入: 1-&gt;2输出: false 示例 2: 输入: 1-&gt;2-&gt;2-&gt;1输出: true 进阶：你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？ 思路： 回文链表和回文字符串类似，逆序后和原链表值一一对应，所以首先能想到的解法是复制一个链表，然后问题转化为 反转链表。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-04T12:27:00.000Z">
-<meta property="article:modified_time" content="2020-04-04T14:41:54.794Z">
+<meta property="article:published_time" content="2020-04-06T13:04:55.000Z">
+<meta property="article:modified_time" content="2020-04-06T13:13:23.781Z">
 <meta property="article:author" content="zhongyiio">
 <meta property="article:tag" content="linked list">
-<meta property="article:tag" content="data structur">
+<meta property="article:tag" content="palindrome">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://zhongyi.io/2020/04/linked-list/">
+<link rel="canonical" href="https://zhongyi.io/2020/04/palindrome-linked-list/">
 
 
 <script id="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>反转链表 | Zhongyi I/O</title>
+  <title>回文列表 | Zhongyi I/O</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109699693-1"></script>
     <script>
@@ -164,7 +164,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://zhongyi.io/2020/04/linked-list/">
+    <link itemprop="mainEntityOfPage" href="https://zhongyi.io/2020/04/palindrome-linked-list/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -177,7 +177,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          反转链表
+          回文列表
         </h1>
 
         <div class="post-meta">
@@ -188,7 +188,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-04-04 20:27:00 / Modified: 22:41:54" itemprop="dateCreated datePublished" datetime="2020-04-04T20:27:00+08:00">2020-04-04</time>
+              <time title="Created: 2020-04-06 21:04:55 / Modified: 21:13:23" itemprop="dateCreated datePublished" datetime="2020-04-06T21:04:55+08:00">2020-04-06</time>
             </span>
 
           
@@ -202,18 +202,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>反转一个单链表。</p>
-<p><strong>示例:</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL</span><br><span class="line">输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</span><br></pre></td></tr></table></figure>
-<p><strong>进阶:</strong><br>你可以迭代或递归地反转链表。你能否用两种方法解决这道题？</p>
-<p><strong>思路:</strong></p>
-<p>在遍历列表时，将当前节点的 <code>head.Next</code> 指针改为指向<code>prev</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL</span><br><span class="line">NULL&lt;-1&lt;-2&lt;-2&lt;-4&lt;-5</span><br></pre></td></tr></table></figure>
-<p><strong>代码:</strong></p>
-<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 迭代</span></span><br><span class="line"><span class="keyword">type</span> ListNode <span class="keyword">struct</span> &#123;</span><br><span class="line">   Val  <span class="keyword">int</span></span><br><span class="line">   Next *ListNode</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">reverseList</span><span class="params">(head *ListNode)</span> *<span class="title">ListNode</span></span> &#123;</span><br><span class="line">   <span class="keyword">var</span> temp *ListNode</span><br><span class="line">   <span class="keyword">var</span> prev *ListNode = <span class="literal">nil</span></span><br><span class="line">   <span class="keyword">for</span> ; head != <span class="literal">nil</span>; &#123;</span><br><span class="line">      temp = head.Next</span><br><span class="line">      head.Next = prev</span><br><span class="line">      prev = head</span><br><span class="line">      head = temp</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> prev</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>递归解法很难用语言描述，我大概模拟一下递归过程，太巧妙了</p>
-<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 递归</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">reverseList2</span><span class="params">(head *ListNode)</span> *<span class="title">ListNode</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> head == <span class="literal">nil</span> || head.Next == <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> head</span><br><span class="line">	&#125;</span><br><span class="line">	last := reverseList2(head.Next)</span><br><span class="line">	<span class="built_in">println</span>(head.Val, last.Val)</span><br><span class="line">	head.Next.Next = head</span><br><span class="line">	head.Next = <span class="literal">nil</span></span><br><span class="line">	<span class="keyword">return</span> last</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">reverseList(1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;nil)</span><br><span class="line">         </span><br><span class="line">         revreverseList(2-&gt;3-&gt;4-&gt;5-&gt;nil)				 </span><br><span class="line"></span><br><span class="line">                  reverseList(3-&gt;4-&gt;5-&gt;nil)			          </span><br><span class="line">          </span><br><span class="line">                           reverseList(4-&gt;5-&gt;nil)				                  </span><br><span class="line">                   </span><br><span class="line">                                    reverseList(5-&gt;nil)</span><br><span class="line">                                    head &#x3D; 5-&gt;nil</span><br><span class="line">                                    return last &#x3D; head</span><br><span class="line">                                </span><br><span class="line">                           head &#x3D; 4-&gt;5-&gt;nil</span><br><span class="line">                           head.Next.Next &#x3D; head &#x2F;&#x2F; 5.Next -&gt; 4</span><br><span class="line">                           head.Next &#x3D; nil       &#x2F;&#x2F; 4.Next -&gt; nil</span><br><span class="line">                           return last &#x3D; 5-&gt;4-&gt;nil</span><br><span class="line">                       </span><br><span class="line">                  head &#x3D; 3-&gt;4&lt;-5</span><br><span class="line">                            |</span><br><span class="line">                           nil</span><br><span class="line">                  head.Next.Next &#x3D; head &#x2F;&#x2F; 4.Next -&gt; 3</span><br><span class="line">                  head.Next &#x3D; nil       &#x2F;&#x2F; 3.Next -&gt; nil</span><br><span class="line">                  return last &#x3D; 5-&gt;4-3-&gt;nil</span><br><span class="line">         </span><br><span class="line">         head &#x3D; 2-&gt;3&lt;-4&lt;-5</span><br><span class="line">                   |</span><br><span class="line">                  nil</span><br><span class="line">         head.Next.Next &#x3D; head &#x2F;&#x2F; 3.Next -&gt; 2</span><br><span class="line">         head.Next &#x3D; nil       &#x2F;&#x2F; 2.Next -&gt; nil</span><br><span class="line">         return last &#x3D; 5-&gt;4-3-&gt;2-&gt;nil</span><br><span class="line"></span><br><span class="line">head &#x3D; 1-&gt;2&lt;-3&lt;-4&lt;-5</span><br><span class="line">          |</span><br><span class="line">         nil</span><br><span class="line">head.Next.Next &#x3D; head &#x2F;&#x2F; 2.Next -&gt; 1</span><br><span class="line">head.Next &#x3D; nil       &#x2F;&#x2F; 1.Next -&gt; nil</span><br><span class="line">return last &#x3D; 5-&gt;4-3-&gt;2-&gt;1-&gt;nil</span><br></pre></td></tr></table></figure>
+        <p>请判断一个链表是否为回文链表。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: 1-&gt;2</span><br><span class="line">输出: false</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: 1-&gt;2-&gt;2-&gt;1</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure>
+<p><strong>进阶：</strong><br>你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？</p>
+<p><strong>思路：</strong></p>
+<p>回文链表和回文字符串类似，逆序后和原链表值一一对应，所以首先能想到的解法是复制一个链表，然后问题转化为 <a href="/2020/04/reverse-linked-list/" title="反转链表">反转链表</a>。</p>
 
     </div>
 
@@ -224,7 +220,7 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/linked-list/" rel="tag"># linked list</a>
-              <a href="/tags/data-structur/" rel="tag"># data structur</a>
+              <a href="/tags/palindrome/" rel="tag"># palindrome</a>
           </div>
 
         
@@ -233,13 +229,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/04/300-LIS/" rel="prev" title="最长递增子序列">
-      <i class="fa fa-chevron-left"></i> 最长递增子序列
+    <a href="/2020/04/max-depth-of-binary-tree/" rel="prev" title="二叉树的最大深度">
+      <i class="fa fa-chevron-left"></i> 二叉树的最大深度
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/04/max-depth-of-binary-tree/" rel="next" title="二叉树的最大深度">
-      二叉树的最大深度 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -363,7 +356,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'zhongyiio.github.io',
       owner       : 'zhongyiio',
       admin       : ['zhongyiio'],
-      id          : 'e2f443396c5f6e3cbf8f24435b36bdac',
+      id          : '2811ef3c93a63b8a3ae0536733e4523d',
         language: '',
       distractionFreeMode: true
     });

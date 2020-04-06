@@ -21,20 +21,21 @@
     var CONFIG = {"hostname":"zhongyi.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"remove","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":{"gitalk":null},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="给定一个二叉树，找出其最大深度。 二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。 说明: 叶子节点是指没有子节点的节点。 示例：给定二叉树 [3,9,20,null,null,15,7]，   3  &#x2F; \ 9  20   &#x2F;  \      15   7  返回它的最大深度 3 。 Tips： 二叉树是一种树形结构，每个节点做多有两颗子树，且节点有左右之分。遍历方式分为深度优先遍历 D">
+  <meta name="description" content="反转一个单链表。 示例: 输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL 进阶:你可以迭代或递归地反转链表。你能否用两种方法解决这道题？ 思路: 在遍历列表时，将当前节点的 head.Next 指针改为指向prev 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULLNULL&amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二叉树的最大深度">
-<meta property="og:url" content="https://zhongyi.io/2020/04/max-depth-of-binary-tree/index.html">
+<meta property="og:title" content="反转链表">
+<meta property="og:url" content="https://zhongyi.io/2020/04/reverse-linked-list/index.html">
 <meta property="og:site_name" content="Zhongyi I&#x2F;O">
-<meta property="og:description" content="给定一个二叉树，找出其最大深度。 二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。 说明: 叶子节点是指没有子节点的节点。 示例：给定二叉树 [3,9,20,null,null,15,7]，   3  &#x2F; \ 9  20   &#x2F;  \      15   7  返回它的最大深度 3 。 Tips： 二叉树是一种树形结构，每个节点做多有两颗子树，且节点有左右之分。遍历方式分为深度优先遍历 D">
+<meta property="og:description" content="反转一个单链表。 示例: 输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL 进阶:你可以迭代或递归地反转链表。你能否用两种方法解决这道题？ 思路: 在遍历列表时，将当前节点的 head.Next 指针改为指向prev 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULLNULL&amp;">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-05T12:07:29.000Z">
-<meta property="article:modified_time" content="2020-04-05T14:58:12.270Z">
+<meta property="article:published_time" content="2020-04-04T12:27:00.000Z">
+<meta property="article:modified_time" content="2020-04-06T13:10:42.570Z">
 <meta property="article:author" content="zhongyiio">
-<meta property="article:tag" content="binary tree">
+<meta property="article:tag" content="linked list">
+<meta property="article:tag" content="data structur">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://zhongyi.io/2020/04/max-depth-of-binary-tree/">
+<link rel="canonical" href="https://zhongyi.io/2020/04/reverse-linked-list/">
 
 
 <script id="page-configurations">
@@ -47,7 +48,7 @@
   };
 </script>
 
-  <title>二叉树的最大深度 | Zhongyi I/O</title>
+  <title>反转链表 | Zhongyi I/O</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109699693-1"></script>
     <script>
@@ -163,7 +164,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://zhongyi.io/2020/04/max-depth-of-binary-tree/">
+    <link itemprop="mainEntityOfPage" href="https://zhongyi.io/2020/04/reverse-linked-list/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -176,7 +177,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          二叉树的最大深度
+          反转链表
         </h1>
 
         <div class="post-meta">
@@ -185,10 +186,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-04-05 20:07:29 / Modified: 22:58:12" itemprop="dateCreated datePublished" datetime="2020-04-05T20:07:29+08:00">2020-04-05</time>
+              <time title="Created: 2020-04-04 20:27:00" itemprop="dateCreated datePublished" datetime="2020-04-04T20:27:00+08:00">2020-04-04</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-04-06 21:10:42" itemprop="dateModified" datetime="2020-04-06T21:10:42+08:00">2020-04-06</time>
+              </span>
 
           
 
@@ -201,25 +208,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>给定一个二叉树，找出其最大深度。</p>
-<p>二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。</p>
-<p>说明: 叶子节点是指没有子节点的节点。</p>
-<p>示例：<br>给定二叉树 [3,9,20,null,null,15,7]，</p>
-<pre><code>  3
- / \
-9  20
-  /  \    
- 15   7
-</code></pre><p> 返回它的最大深度 3 。</p>
-<p><strong>Tips：</strong></p>
-<p>二叉树是一种树形结构，每个节点做多有两颗子树，且节点有左右之分。遍历方式分为深度优先遍历 <code>DFS</code>（前序、中序、后序）和广度优先遍历 <code>BFS</code>。</p>
-<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> TreeNode <span class="keyword">struct</span> &#123;</span><br><span class="line">	Val   <span class="keyword">int</span></span><br><span class="line">	Left  *TreeNode</span><br><span class="line">	Right *TreeNode</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>例子如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">  3</span><br><span class="line"> &#x2F; \</span><br><span class="line">9  20</span><br><span class="line">  &#x2F;  \</span><br><span class="line"> 15   7</span><br></pre></td></tr></table></figure>
-<p><strong>思路：</strong></p>
-<p>可以把问题拆解成 <code>1 + 左右子中较大的层数</code> 。</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">maxDepth</span><span class="params">(root *TreeNode)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> root == <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> max(maxDepth(root.Left), maxDepth(root.Right)) + <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">max</span><span class="params">(left, right <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> left &gt; right &#123;</span><br><span class="line">		<span class="keyword">return</span> left</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> right</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>反转一个单链表。</p>
+<p><strong>示例:</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL</span><br><span class="line">输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</span><br></pre></td></tr></table></figure>
+<p><strong>进阶:</strong><br>你可以迭代或递归地反转链表。你能否用两种方法解决这道题？</p>
+<p><strong>思路:</strong></p>
+<p>在遍历列表时，将当前节点的 <code>head.Next</code> 指针改为指向<code>prev</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL</span><br><span class="line">NULL&lt;-1&lt;-2&lt;-2&lt;-4&lt;-5</span><br></pre></td></tr></table></figure>
+<p><strong>代码:</strong></p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 迭代</span></span><br><span class="line"><span class="keyword">type</span> ListNode <span class="keyword">struct</span> &#123;</span><br><span class="line">   Val  <span class="keyword">int</span></span><br><span class="line">   Next *ListNode</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">reverseList</span><span class="params">(head *ListNode)</span> *<span class="title">ListNode</span></span> &#123;</span><br><span class="line">   <span class="keyword">var</span> temp *ListNode</span><br><span class="line">   <span class="keyword">var</span> prev *ListNode = <span class="literal">nil</span></span><br><span class="line">   <span class="keyword">for</span> ; head != <span class="literal">nil</span>; &#123;</span><br><span class="line">      temp = head.Next</span><br><span class="line">      head.Next = prev</span><br><span class="line">      prev = head</span><br><span class="line">      head = temp</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> prev</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>递归解法很难用语言描述，我大概模拟一下递归过程，太巧妙了</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 递归</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">reverseList2</span><span class="params">(head *ListNode)</span> *<span class="title">ListNode</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> head == <span class="literal">nil</span> || head.Next == <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> head</span><br><span class="line">	&#125;</span><br><span class="line">	last := reverseList2(head.Next)</span><br><span class="line">	<span class="built_in">println</span>(head.Val, last.Val)</span><br><span class="line">	head.Next.Next = head</span><br><span class="line">	head.Next = <span class="literal">nil</span></span><br><span class="line">	<span class="keyword">return</span> last</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">reverseList(1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;nil)</span><br><span class="line">         </span><br><span class="line">         revreverseList(2-&gt;3-&gt;4-&gt;5-&gt;nil)				 </span><br><span class="line"></span><br><span class="line">                  reverseList(3-&gt;4-&gt;5-&gt;nil)			          </span><br><span class="line">          </span><br><span class="line">                           reverseList(4-&gt;5-&gt;nil)				                  </span><br><span class="line">                   </span><br><span class="line">                                    reverseList(5-&gt;nil)</span><br><span class="line">                                    head &#x3D; 5-&gt;nil</span><br><span class="line">                                    return last &#x3D; head</span><br><span class="line">                                </span><br><span class="line">                           head &#x3D; 4-&gt;5-&gt;nil</span><br><span class="line">                           head.Next.Next &#x3D; head &#x2F;&#x2F; 5.Next -&gt; 4</span><br><span class="line">                           head.Next &#x3D; nil       &#x2F;&#x2F; 4.Next -&gt; nil</span><br><span class="line">                           return last &#x3D; 5-&gt;4-&gt;nil</span><br><span class="line">                       </span><br><span class="line">                  head &#x3D; 3-&gt;4&lt;-5</span><br><span class="line">                            |</span><br><span class="line">                           nil</span><br><span class="line">                  head.Next.Next &#x3D; head &#x2F;&#x2F; 4.Next -&gt; 3</span><br><span class="line">                  head.Next &#x3D; nil       &#x2F;&#x2F; 3.Next -&gt; nil</span><br><span class="line">                  return last &#x3D; 5-&gt;4-3-&gt;nil</span><br><span class="line">         </span><br><span class="line">         head &#x3D; 2-&gt;3&lt;-4&lt;-5</span><br><span class="line">                   |</span><br><span class="line">                  nil</span><br><span class="line">         head.Next.Next &#x3D; head &#x2F;&#x2F; 3.Next -&gt; 2</span><br><span class="line">         head.Next &#x3D; nil       &#x2F;&#x2F; 2.Next -&gt; nil</span><br><span class="line">         return last &#x3D; 5-&gt;4-3-&gt;2-&gt;nil</span><br><span class="line"></span><br><span class="line">head &#x3D; 1-&gt;2&lt;-3&lt;-4&lt;-5</span><br><span class="line">          |</span><br><span class="line">         nil</span><br><span class="line">head.Next.Next &#x3D; head &#x2F;&#x2F; 2.Next -&gt; 1</span><br><span class="line">head.Next &#x3D; nil       &#x2F;&#x2F; 1.Next -&gt; nil</span><br><span class="line">return last &#x3D; 5-&gt;4-3-&gt;2-&gt;1-&gt;nil</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -229,7 +229,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/binary-tree/" rel="tag"># binary tree</a>
+              <a href="/tags/linked-list/" rel="tag"># linked list</a>
+              <a href="/tags/data-structur/" rel="tag"># data structur</a>
           </div>
 
         
@@ -238,12 +239,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/04/reverse-linked-list/" rel="prev" title="反转链表">
-      <i class="fa fa-chevron-left"></i> 反转链表
+    <a href="/2020/04/300-LIS/" rel="prev" title="最长递增子序列">
+      <i class="fa fa-chevron-left"></i> 最长递增子序列
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/04/palindrome-linked-list/" rel="next" title="回文列表">
-      回文列表 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/04/max-depth-of-binary-tree/" rel="next" title="二叉树的最大深度">
+      二叉树的最大深度 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -368,7 +369,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'zhongyiio.github.io',
       owner       : 'zhongyiio',
       admin       : ['zhongyiio'],
-      id          : 'f445e646550ccfcf1fa347894efab59f',
+      id          : '383e8592cb84abff3cd8051f55692478',
         language: '',
       distractionFreeMode: true
     });

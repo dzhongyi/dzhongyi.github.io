@@ -157,6 +157,72 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://zhongyi.io/2020/04/palindrome-linked-list/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhongyiio">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhongyi I/O">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/palindrome-linked-list/" class="post-title-link" itemprop="url">回文列表</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-04-06 21:04:55 / Modified: 21:13:23" itemprop="dateCreated datePublished" datetime="2020-04-06T21:04:55+08:00">2020-04-06</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>请判断一个链表是否为回文链表。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: 1-&gt;2</span><br><span class="line">输出: false</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: 1-&gt;2-&gt;2-&gt;1</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure>
+<p><strong>进阶：</strong><br>你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？</p>
+<p><strong>思路：</strong></p>
+<p>回文链表和回文字符串类似，逆序后和原链表值一一对应，所以首先能想到的解法是复制一个链表，然后问题转化为 <a href="/2020/04/reverse-linked-list/" title="反转链表">反转链表</a>。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://zhongyi.io/2020/04/max-depth-of-binary-tree/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -234,7 +300,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://zhongyi.io/2020/04/linked-list/">
+    <link itemprop="mainEntityOfPage" href="https://zhongyi.io/2020/04/reverse-linked-list/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -248,7 +314,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/04/linked-list/" class="post-title-link" itemprop="url">反转链表</a>
+            <a href="/2020/04/reverse-linked-list/" class="post-title-link" itemprop="url">反转链表</a>
         </h2>
 
         <div class="post-meta">
@@ -257,10 +323,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-04-04 20:27:00 / Modified: 22:41:54" itemprop="dateCreated datePublished" datetime="2020-04-04T20:27:00+08:00">2020-04-04</time>
+              <time title="Created: 2020-04-04 20:27:00" itemprop="dateCreated datePublished" datetime="2020-04-04T20:27:00+08:00">2020-04-04</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-04-06 21:10:42" itemprop="dateModified" datetime="2020-04-06T21:10:42+08:00">2020-04-06</time>
+              </span>
 
           
 
@@ -335,7 +407,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-04-03 10:32:28" itemprop="dateModified" datetime="2020-04-03T10:32:28+08:00">2020-04-03</time>
+                <time title="Modified: 2020-04-06 21:06:36" itemprop="dateModified" datetime="2020-04-06T21:06:36+08:00">2020-04-06</time>
               </span>
 
           
@@ -396,7 +468,7 @@ dp(i)=max\{d(j)+1, nums[j] < nums[i], \{j \in \{0...i-1\}\}</script><p>表1 模�
 </tbody>
 </table>
 </div>
-<p>代码如下：</p>
+<p><strong>代码：</strong></p>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">lengthOfLIS</span><span class="params">(nums []<span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	l := <span class="built_in">len</span>(nums)</span><br><span class="line">	<span class="keyword">if</span> l == <span class="number">0</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">	&#125;</span><br><span class="line">	dp := <span class="built_in">make</span>([]<span class="keyword">int</span>, l)</span><br><span class="line">	<span class="comment">// initial dp array default 1</span></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; l; i++ &#123;</span><br><span class="line">		dp[i] = <span class="number">1</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	res := <span class="number">1</span></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; l; i++ &#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> j := i - <span class="number">1</span>; j &gt;= <span class="number">0</span>; j-- &#123;</span><br><span class="line">			<span class="keyword">if</span> nums[j] &lt; nums[i] &#123;</span><br><span class="line">				dp[i] = max(dp[i], <span class="number">1</span> + dp[j])</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		res = max(res, dp[i])</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">max</span><span class="params">(a, b <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> a &gt; b &#123;</span><br><span class="line">		<span class="keyword">return</span> a</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> b</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
