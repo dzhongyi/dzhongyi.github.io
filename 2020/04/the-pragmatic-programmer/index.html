@@ -21,21 +21,23 @@
     var CONFIG = {"hostname":"zhongyi.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"remove","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":{"gitalk":null},"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="请判断一个链表是否为回文链表。 示例 1: 输入: 1-&gt;2输出: false 示例 2: 输入: 1-&gt;2-&gt;2-&gt;1输出: true 进阶：你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？ 思路： 回文链表和回文字符串类似，反转列表后和原链表值一一对应，所以首先能想到的解法是复制一个链表，然后问题转化为 反转链表，这样的空间复杂度是 $O(n)$。 题目">
+  <meta name="description" content="熵是一个物理学术语，他定义了一个系统的“无序”总量。   破窗理论，一扇破的窗户，只要有一段时间不去修理，建筑中的居民就会迁移默化地产生一种被遗弃的感觉—当权者不关心这幢建筑的感觉。   不要搁置“破窗”（糟糕的设计、错误的决定、低劣的代码）不去修理。每发现一个就赶紧修一个。   永远留意大局，持续不断地审视你身边发生的事情，而不要只专注于你个人在做的事情。   够好即可的软件，训练自己写出">
 <meta property="og:type" content="article">
-<meta property="og:title" content="回文列表">
-<meta property="og:url" content="https://zhongyi.io/2020/04/palindrome-linked-list/index.html">
+<meta property="og:title" content="程序员修炼之道（第2版）读书笔记">
+<meta property="og:url" content="https://zhongyi.io/2020/04/the-pragmatic-programmer/index.html">
 <meta property="og:site_name" content="Zhongyi I&#x2F;O">
-<meta property="og:description" content="请判断一个链表是否为回文链表。 示例 1: 输入: 1-&gt;2输出: false 示例 2: 输入: 1-&gt;2-&gt;2-&gt;1输出: true 进阶：你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？ 思路： 回文链表和回文字符串类似，反转列表后和原链表值一一对应，所以首先能想到的解法是复制一个链表，然后问题转化为 反转链表，这样的空间复杂度是 $O(n)$。 题目">
+<meta property="og:description" content="熵是一个物理学术语，他定义了一个系统的“无序”总量。   破窗理论，一扇破的窗户，只要有一段时间不去修理，建筑中的居民就会迁移默化地产生一种被遗弃的感觉—当权者不关心这幢建筑的感觉。   不要搁置“破窗”（糟糕的设计、错误的决定、低劣的代码）不去修理。每发现一个就赶紧修一个。   永远留意大局，持续不断地审视你身边发生的事情，而不要只专注于你个人在做的事情。   够好即可的软件，训练自己写出">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-06T13:04:55.000Z">
-<meta property="article:modified_time" content="2020-04-06T15:23:53.303Z">
+<meta property="article:published_time" content="2020-04-09T15:43:30.000Z">
+<meta property="article:modified_time" content="2020-04-09T16:14:22.714Z">
 <meta property="article:author" content="zhongyiio">
-<meta property="article:tag" content="linked list">
-<meta property="article:tag" content="palindrome">
+<meta property="article:tag" content="程序员修炼之道">
+<meta property="article:tag" content="通项务实的最高境界">
+<meta property="article:tag" content="The Pragmatic Programmer">
+<meta property="article:tag" content="Programming">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://zhongyi.io/2020/04/palindrome-linked-list/">
+<link rel="canonical" href="https://zhongyi.io/2020/04/the-pragmatic-programmer/">
 
 
 <script id="page-configurations">
@@ -48,7 +50,7 @@
   };
 </script>
 
-  <title>回文列表 | Zhongyi I/O</title>
+  <title>程序员修炼之道（第2版）读书笔记 | Zhongyi I/O</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109699693-1"></script>
     <script>
@@ -164,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://zhongyi.io/2020/04/palindrome-linked-list/">
+    <link itemprop="mainEntityOfPage" href="https://zhongyi.io/2020/04/the-pragmatic-programmer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -177,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          回文列表
+          程序员修炼之道（第2版）读书笔记
         </h1>
 
         <div class="post-meta">
@@ -186,10 +188,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-04-06 21:04:55 / Modified: 23:23:53" itemprop="dateCreated datePublished" datetime="2020-04-06T21:04:55+08:00">2020-04-06</time>
+              <time title="Created: 2020-04-09 23:43:30" itemprop="dateCreated datePublished" datetime="2020-04-09T23:43:30+08:00">2020-04-09</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-04-10 00:14:22" itemprop="dateModified" datetime="2020-04-10T00:14:22+08:00">2020-04-10</time>
+              </span>
 
           
 
@@ -202,17 +210,46 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>请判断一个链表是否为回文链表。</p>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: 1-&gt;2</span><br><span class="line">输出: false</span><br></pre></td></tr></table></figure>
-<p><strong>示例 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: 1-&gt;2-&gt;2-&gt;1</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure>
-<p><strong>进阶：</strong><br>你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？</p>
-<p><strong>思路：</strong></p>
-<p>回文链表和回文字符串类似，反转列表后和原链表值一一对应，所以首先能想到的解法是复制一个链表，然后问题转化为 <a href="/2020/04/reverse-linked-list/" title="反转链表">反转链表</a>，这样的空间复杂度是 $O(n)$。</p>
-<p>题目进阶要求用 $O(1)$ 的空间复杂度。考虑不复制原链表的方案，回文的另一个特点是中心对称，所以问题转化为怎么找到链表的中心位置，这里可以用到双指针技巧，定义<code>slow</code> 和<code>flow</code>，<code>slow</code> 以步长 1 前进，<code>fast</code>以步长 2 前进，当 <code>fast.Next = nil</code> 时，<code>slow</code>的位置就是链表中心位置。当然还需要考虑链表个数奇偶数的情况。然后从中心位置反转后半部分链表与前半部分比较。</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">isPalindrome</span><span class="params">(head *ListNode)</span> <span class="title">bool</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> head == <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> cp = Copy(head)</span><br><span class="line">	rcp := reverseList2(cp)</span><br><span class="line">	<span class="keyword">for</span> ;head.Next != <span class="literal">nil</span> &amp;&amp; rcp.Next != <span class="literal">nil</span>; &#123;</span><br><span class="line">		<span class="keyword">if</span> head.Val != rcp.Val &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			head = head.Next</span><br><span class="line">			rcp = rcp.Next</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">reverseList2</span><span class="params">(head *ListNode)</span> *<span class="title">ListNode</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> head == <span class="literal">nil</span> || head.Next == <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> head</span><br><span class="line">	&#125;</span><br><span class="line">	last := reverseList2(head.Next)</span><br><span class="line">	head.Next.Next = head</span><br><span class="line">	head.Next = <span class="literal">nil</span></span><br><span class="line">	<span class="keyword">return</span> last</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Copy</span><span class="params">(head *ListNode)</span> *<span class="title">ListNode</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> head == <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> result = &amp;ListNode&#123;&#125;</span><br><span class="line">	result.Val = head.Val</span><br><span class="line">	result.Next = Copy(head.Next)</span><br><span class="line">	<span class="keyword">return</span> result</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <blockquote>
+<p>  熵是一个物理学术语，他定义了一个系统的“无序”总量。</p>
+<p>  破窗理论，一扇破的窗户，只要有一段时间不去修理，建筑中的居民就会迁移默化地产生一种被遗弃的感觉—当权者不关心这幢建筑的感觉。</p>
+<p>  不要搁置“破窗”（糟糕的设计、错误的决定、低劣的代码）不去修理。每发现一个就赶紧修一个。</p>
+<p>  永远留意大局，持续不断地审视你身边发生的事情，而不要只专注于你个人在做的事情。</p>
+<p>  够好即可的软件，训练自己写出够好即可的软件—对用户、未来的维护者来说够好即可，只要好的程度让你自己内心平静就可以。</p>
+</blockquote>
+<p>创业不要一味地追求完美，能带着bug尽快试错，才有可能让你的用户提出更好的建议。</p>
+<p>投资自己和理财的方法论有相似之处：</p>
+<blockquote>
+<ol>
+<li>正规投资者有定期投资的习惯</li>
+<li>多样化是长线成功的关键。</li>
+<li>聪明的投资者会平衡保守型和风险型高回报的投资组合。</li>
+<li>投资者用低买高卖来获得最大的回报。</li>
+<li><p>应定期审查和重新平衡投资组合。</p>
+<p>管理这类投资是一项技能，就像其他技能一样—可以学会，诀窍是让自己一开始就这样，并养成习惯。</p>
+</li>
+</ol>
+</blockquote>
+<p>习惯需要逐渐培养，不能贪多，也不能三分钟热度，制定一个计划按时完成它，可以是很简单的事情，不要忽视习惯的力量。</p>
+<blockquote>
+<p>  计算机是由人来使用的，你做的事情是为了满足人的需要，这非常重要。和你一起工作的是人、雇佣你的也是人、黑你的也是人。不要忘记方程式中人的那一面，他需要完全不同的技能集（我们称这些为软技能，听起来很容易，但实际很硬核，难以掌握）</p>
+</blockquote>
+<p>这可能是我的致命弱点。</p>
+<p>碰到解决不了的问题，要坦率的承认，但不要让问题沉寂，要寻求解决问题的途径。</p>
+<blockquote>
+<p>  批判性思维，要批判性的思考读到的听到的东西。你需要确保组合中的知识是精准的，未受供应商或媒体炒作的影响。当心坚持教条的狂热者，他们将其视为唯一答案—而那些教条未必适合你和你的项目。</p>
+</blockquote>
+<p>要质疑，不能完全听信权威，要有自己独立的思考和判断。</p>
+<blockquote>
+<p>  <strong>交流</strong></p>
+<p>  缺乏有效的沟通，好点子就成了一个孤儿。</p>
+</blockquote>
+<p>沟通或者回避沟通是我最大的问题，要试着和别人交流想法，不能因为内心的鄙视拒绝和人沟通，要宽容。</p>
+<blockquote>
+<p>  明白自己在说什么</p>
+</blockquote>
+<p>这很重要，有必要先列一个大纲，问一下自己想说清楚什么。</p>
+<p>（未完待续 2020.04.10）</p>
 
     </div>
 
@@ -222,8 +259,10 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/linked-list/" rel="tag"># linked list</a>
-              <a href="/tags/palindrome/" rel="tag"># palindrome</a>
+              <a href="/tags/%E7%A8%8B%E5%BA%8F%E5%91%98%E4%BF%AE%E7%82%BC%E4%B9%8B%E9%81%93/" rel="tag"># 程序员修炼之道</a>
+              <a href="/tags/%E9%80%9A%E9%A1%B9%E5%8A%A1%E5%AE%9E%E7%9A%84%E6%9C%80%E9%AB%98%E5%A2%83%E7%95%8C/" rel="tag"># 通项务实的最高境界</a>
+              <a href="/tags/The-Pragmatic-Programmer/" rel="tag"># The Pragmatic Programmer</a>
+              <a href="/tags/Programming/" rel="tag"># Programming</a>
           </div>
 
         
@@ -232,13 +271,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/04/max-depth-of-binary-tree/" rel="prev" title="二叉树的最大深度">
-      <i class="fa fa-chevron-left"></i> 二叉树的最大深度
+    <a href="/2020/04/climbing-stairs/" rel="prev" title="climbing-stairs">
+      <i class="fa fa-chevron-left"></i> climbing-stairs
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/04/climbing-stairs/" rel="next" title="climbing-stairs">
-      climbing-stairs <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -348,59 +384,6 @@
   
 
   
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
 
   
 
@@ -415,7 +398,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'zhongyiio.github.io',
       owner       : 'zhongyiio',
       admin       : ['zhongyiio'],
-      id          : '2811ef3c93a63b8a3ae0536733e4523d',
+      id          : '6bb29a5270629b2d4d1408606eb01d15',
         language: '',
       distractionFreeMode: true
     });

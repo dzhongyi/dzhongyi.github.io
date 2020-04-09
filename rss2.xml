@@ -15,8 +15,45 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Mon, 06 Apr 2020 15:23:53 GMT</pubDate>
+    <pubDate>Thu, 09 Apr 2020 16:14:22 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>程序员修炼之道（第2版）读书笔记</title>
+      <link>https://zhongyi.io/2020/04/the-pragmatic-programmer/</link>
+      <guid>https://zhongyi.io/2020/04/the-pragmatic-programmer/</guid>
+      <pubDate>Thu, 09 Apr 2020 15:43:30 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;blockquote&gt;
+&lt;p&gt;  熵是一个物理学术语，他定义了一个系统的“无序”总量。&lt;/p&gt;
+&lt;p&gt;  破窗理论，一扇破的窗户，只要有一段时间不去修理，建筑中的居民就会迁移默化地产生一种被遗弃的感觉—当权者不关心这幢建筑的感觉。&lt;/p&gt;
+&lt;p&gt; 
+          
+        
+      
+      </description>
+      
+      
+      <comments>https://zhongyi.io/2020/04/the-pragmatic-programmer/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>climbing-stairs</title>
+      <link>https://zhongyi.io/2020/04/climbing-stairs/</link>
+      <guid>https://zhongyi.io/2020/04/climbing-stairs/</guid>
+      <pubDate>Tue, 07 Apr 2020 15:15:09 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      
+      <comments>https://zhongyi.io/2020/04/climbing-stairs/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>回文列表</title>
