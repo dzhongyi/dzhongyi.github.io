@@ -15,8 +15,31 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 11 Apr 2020 15:25:52 GMT</pubDate>
+    <pubDate>Fri, 07 Aug 2020 07:00:26 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>a-new-start</title>
+      <link>https://zhongyi.io/2020/08/a-new-start/</link>
+      <guid>https://zhongyi.io/2020/08/a-new-start/</guid>
+      <pubDate>Fri, 07 Aug 2020 07:00:26 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;p&gt;title: 缘聚缘散，下一站出发&lt;br&gt;date: 2017-04-01 16:25:37&lt;br&gt;category: Life&lt;/p&gt;
+&lt;p&gt;截止写这篇文章来北京已经 2 年零 8 个月了，说说这段时间的感受。&lt;/p&gt;
+&lt;p&gt;2014 年 7 月 1
+          
+        
+      
+      </description>
+      
+      
+      <comments>https://zhongyi.io/2020/08/a-new-start/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>程序员修炼之道（第2版）读书笔记</title>
@@ -243,28 +266,6 @@
       
       
       <comments>https://zhongyi.io/2017/09/outlook-on-life/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>缘聚缘散，下一站出发</title>
-      <link>https://zhongyi.io/2017/04/a-new-start/</link>
-      <guid>https://zhongyi.io/2017/04/a-new-start/</guid>
-      <pubDate>Sat, 01 Apr 2017 08:25:37 GMT</pubDate>
-      <description>
-      
-        
-        
-          
-          
-            &lt;p&gt;截止写这篇文章来北京已经 2 年零 8 个月了，说说这段时间的感受。&lt;/p&gt;
-&lt;p&gt;2014 年 7 月 1
-          
-        
-      
-      </description>
-      
-      
-      <comments>https://zhongyi.io/2017/04/a-new-start/#disqus_thread</comments>
     </item>
     
   </channel>
